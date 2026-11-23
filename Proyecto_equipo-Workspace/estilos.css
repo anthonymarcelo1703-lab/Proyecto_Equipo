@@ -1,0 +1,200 @@
+/* Estilos generales de la página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    color: #333333;
+}
+
+/* Encabezado */
+header {
+    background-color: #24558a;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+/* Menú de navegación */
+nav {
+    background-color: #183b60;
+    text-align: center;
+    padding: 12px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+}
+
+/* Contenido principal */
+main {
+    width: 85%;
+    margin: 20px auto;
+}
+
+section {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+h2 {
+    color: #24558a;
+}
+
+/* Tarjetas de los integrantes */
+.integrantes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.persona {
+    background-color: #e5edf5;
+    padding: 15px;
+    border-radius: 6px;
+    flex: 1 1 180px;
+    text-align: center;
+}
+
+.persona h3 {
+    color: #183b60;
+}
+
+/* Pie de página */
+footer {
+    background-color: #183b60;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* Ajuste para pantallas pequeñas */
+@media (max-width: 600px) {
+    main {
+        width: 95%;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px;
+    }
+}
+
+/* Mejoras visuales */
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    background: linear-gradient(135deg, #24558a, #3679b8);
+    padding: 38px 20px;
+}
+
+header h1 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+nav a {
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+nav a:hover,
+nav a:focus-visible {
+    background-color: #2d5b86;
+    transform: translateY(-2px);
+}
+
+section {
+    box-shadow: 0 3px 12px rgba(24, 59, 96, 0.08);
+}
+
+.persona {
+    border: 1px solid #d4e1ee;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.persona:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(24, 59, 96, 0.14);
+}
+
+footer {
+    margin-top: 30px;
+}
+
+/* Información del equipo */
+.descripcion-equipo {
+    max-width: 760px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.persona p {
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+/* Navegación accesible y adaptación a distintos dispositivos */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+nav a {
+    margin: 0;
+}
+
+a:focus-visible {
+    outline: 3px solid #f2c14e;
+    outline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 28px 16px;
+    }
+
+    header h1 {
+        font-size: 1.7rem;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    nav a {
+        width: min(100% - 24px, 280px);
+        text-align: center;
+    }
+
+    main {
+        width: 92%;
+    }
+
+    section {
+        padding: 16px;
+    }
+
+    .integrantes {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+    .integrantes {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
